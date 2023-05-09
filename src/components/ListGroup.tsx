@@ -1,9 +1,14 @@
 // import { MouseEvent } from "react";
+// interface ListGroupProps {}
+interface Props {
+  items: string[];
+  heading: string;
+}
 
 import { useState } from "react";
 
-function ListGroup() {
-  let items = ["Warsaw", "Gdynia", "Cracow", "Olsztyn", "Yokohama"];
+function ListGroup({ items, heading }: Props) {
+  // let items = ["Warsaw", "Gdynia", "Cracow", "Olsztyn", "Yokohama"];
   // items = [];
   // const getMessage = () => {
   //   return items.length === 0 && <p>No items found</p>;
@@ -20,7 +25,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>Title</h1>
+      <h1>{heading}</h1>
       {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
         {items.map((item, index) => (
