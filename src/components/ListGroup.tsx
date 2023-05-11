@@ -3,11 +3,12 @@
 interface Props {
   items: string[];
   heading: string;
+  onSelectItem: (item: string) => void;
 }
 
 import { useState } from "react";
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
   // let items = ["Warsaw", "Gdynia", "Cracow", "Olsztyn", "Yokohama"];
   // items = [];
   // const getMessage = () => {
@@ -36,7 +37,10 @@ function ListGroup({ items, heading }: Props) {
                 : "list-group-item"
             }
             key={item}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => {
+              setSelectedIndex(index);
+              onSelectItem(item);
+            }}
           >
             {index}. {item}
           </li>
