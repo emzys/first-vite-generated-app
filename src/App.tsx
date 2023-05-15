@@ -1,5 +1,6 @@
 import Alert from "./components/Alert";
-import ListGroup from "./components/ListGroup";
+import Button from "./components/Button";
+// import ListGroup from "./components/ListGroup";
 
 function App() {
   // let items = ["Warsaw", "Gdynia", "Cracow", "Olsztyn", "Yokohama"];
@@ -13,6 +14,13 @@ function App() {
       <Alert>
         Hello <span>World</span>!
       </Alert>
+      <Button
+        onClick={() => {
+          console.log("CLICKED!");
+        }}
+      >
+        danger
+      </Button>
 
       {/* <ListGroup
         items={items}
