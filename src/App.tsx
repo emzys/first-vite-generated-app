@@ -19,7 +19,7 @@ function App() {
           console.log("CLICKED!");
         }}
       >
-        danger
+        Danger!
       </Button>
 
       {/* <ListGroup
