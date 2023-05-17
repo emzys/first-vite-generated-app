@@ -1,2 +1,5 @@
-# first-vite-generated-app
-# react with typescript
+first-vite-generated-app
+
+react with typescript
+
+npm run dev
