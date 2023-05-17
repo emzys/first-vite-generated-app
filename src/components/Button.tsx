@@ -1,4 +1,5 @@
 interface Props {
+  // alphabetical order is good for readability
   children: string;
   color?: "primary" | "secondary" | "danger";
   onClick: () => void;
