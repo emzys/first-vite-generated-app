@@ -15,9 +15,8 @@ function App() {
   return (
     <div className="App">
       {alertVisible && (
-        <Alert>
+        <Alert onClose={() => setAlertVisible(false)}>
           Hello <span>World</span>!
-          <ButtonClose />
         </Alert>
       )}
       <Button
