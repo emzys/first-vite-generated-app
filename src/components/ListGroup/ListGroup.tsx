@@ -1,3 +1,5 @@
+import { useState } from "react";
+import "./ListGroup.css";
 // import { MouseEvent } from "react";
 // interface ListGroupProps {}
 interface Props {
@@ -5,8 +7,6 @@ interface Props {
   heading: string;
   onSelectItem: (item: string) => void;
 }
-
-import { useState } from "react";
 
 function ListGroup({ items, heading, onSelectItem }: Props) {
   // let items = ["Warsaw", "Gdynia", "Cracow", "Olsztyn", "Yokohama"];
@@ -42,7 +42,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
               onSelectItem(item);
             }}
           >
-            {index}. {item}
+            {index + 1}. {item}
           </li>
         ))}
       </ul>
