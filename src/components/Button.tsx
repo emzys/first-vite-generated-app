@@ -1,3 +1,17 @@
+// import "./Button.css";
+import styled from "styled-components";
+
+const Btn = styled.ul`
+  background-color: cornflowerblue;
+  padding: 8px 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-style: outset;
+  border-color: buttonborder;
+  text-align: center;
+  coursor: pointer;
+`;
+
 interface Props {
   // alphabetical order is good for readability
   children: string;
@@ -7,9 +21,9 @@ interface Props {
 
 const Button = ({ children, color = "danger", onClick }: Props) => {
   return (
-    <button type="button" className={`btn btn-${color}`} onClick={onClick}>
+    <Btn /**type="button" className={`btn btn-${color}`}**/ onClick={onClick}>
       {children}
-    </button>
+    </Btn>
   );
 };
 
