@@ -1,0 +1,13 @@
+:not(.active) {
+  > svg {
+    /* color: rgb(217, 90, 90); */
+    /* color: white; */
+    color: deeppink;
+  }
+}
+.inline {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
