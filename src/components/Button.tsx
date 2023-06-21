@@ -3,14 +3,18 @@ import styled from "styled-components";
 import { GiBurningSkull } from "react-icons/gi";
 
 const Btn = styled.ul`
-  background-color: cornflowerblue;
+  background-color: #9ec1ff;
   padding: 8px 16px;
   display: inline-block;
   box-sizing: border-box;
   border-style: outset;
-  border-color: buttonborder;
+  border-color: cornflowerblue;
   text-align: center;
   coursor: pointer;
+
+  > svg {
+    transform: translateY(2px);
+  }
 `;
 
 interface Props {
@@ -23,9 +27,9 @@ interface Props {
 const Button = ({ children, color = "danger", onClick }: Props) => {
   return (
     <Btn /**type="button" className={`btn btn-${color}`}**/ onClick={onClick}>
-      <GiBurningSkull transform="translateY(2px)" color="deeppink" />
+      <GiBurningSkull color="deeppink" />
       {children}
-      <GiBurningSkull transform="translateY(2px)" color="deeppink" />
+      <GiBurningSkull color="deeppink" />
     </Btn>
   );
 };
