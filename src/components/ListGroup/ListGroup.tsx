@@ -3,6 +3,7 @@ import styles from "./ListGroup.module.css";
 import styled from "styled-components";
 // import { MouseEvent } from "react";
 // interface ListGroupProps {}
+import Like from "../Like/Like";
 
 interface LiProps {
   active: boolean;
@@ -47,13 +48,23 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
                 ? "list-group-item active"
                 : "list-group-item"
             }
-            key={item}
+            key={`list-item-${index + 1}`}
             onClick={() => {
               setSelectedIndex(index);
               onSelectItem(item);
             }}
           >
-            {index + 1}. {item}
+            <p>
+              {index + 1}. {item}
+              <Like
+                key={`heart-${index + 1}`}
+                display="inline"
+                active={selectedIndex === index}
+                onClick={() => {
+                  setSelectedIndex(index);
+                }}
+              />
+            </p>
           </Li>
         ))}
       </ul>
