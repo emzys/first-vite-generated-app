@@ -2,6 +2,7 @@ import { useState } from "react";
 import Alert from "./components/Alert/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
+import Like from "./components/Like/Like";
 
 function App() {
   let items = ["Warsaw", "Gdynia", "Cracow", "Olsztyn", "Yokohama"];
@@ -11,6 +12,7 @@ function App() {
   };
 
   const [alertVisible, setAlertVisible] = useState(false);
+  const [heartActive, setHeartActive] = useState(false);
 
   return (
     <div className="App">
@@ -27,6 +29,14 @@ function App() {
       >
         &nbsp;DANGER!&nbsp;
       </Button>
+
+      <Like
+        display="block"
+        active={heartActive}
+        onClick={() => {
+          setHeartActive(!heartActive);
+        }}
+      />
 
       <ListGroup
         items={items}
