@@ -1,5 +1,6 @@
 // import "./Button.css";
 import styled from "styled-components";
+import { GiBurningSkull } from "react-icons/gi";
 
 const Btn = styled.ul`
   background-color: cornflowerblue;
@@ -22,7 +23,9 @@ interface Props {
 const Button = ({ children, color = "danger", onClick }: Props) => {
   return (
     <Btn /**type="button" className={`btn btn-${color}`}**/ onClick={onClick}>
+      <GiBurningSkull />
       {children}
+      <GiBurningSkull />
     </Btn>
   );
 };
