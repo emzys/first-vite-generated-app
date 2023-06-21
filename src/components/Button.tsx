@@ -23,9 +23,9 @@ interface Props {
 const Button = ({ children, color = "danger", onClick }: Props) => {
   return (
     <Btn /**type="button" className={`btn btn-${color}`}**/ onClick={onClick}>
-      <GiBurningSkull />
+      <GiBurningSkull transform="translateY(2px)" color="deeppink" />
       {children}
-      <GiBurningSkull />
+      <GiBurningSkull transform="translateY(2px)" color="deeppink" />
     </Btn>
   );
 };
