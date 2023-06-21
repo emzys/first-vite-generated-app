@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
-import ButtonClose from "./ButtonClose";
+import ButtonClose from "../ButtonClose/ButtonClose";
+import styles from "./Alert.module.css";
 
 interface Props {
   children: ReactNode;
@@ -9,7 +10,7 @@ interface Props {
 const Alert = ({ children, onClose }: Props) => {
   // console.log("children :>> ", children);
   return (
-    <div className="alert alert-warning alert-dismissible">
+    <div className={styles.alert} /*"alert alert-warning alert-dismissible"*/>
       {children}
       <ButtonClose
         onClose={() => {

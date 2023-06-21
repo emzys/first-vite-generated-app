@@ -1,0 +1,10 @@
+.alert {
+  position: relative;
+  border: 2px solid deeppink;
+  padding: 16px;
+  border-radius: 12px;
+
+  > span {
+    color: deeppink;
+  }
+}
