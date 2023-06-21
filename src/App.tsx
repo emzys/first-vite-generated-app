@@ -19,12 +19,13 @@ function App() {
           Hello <span>World</span>!
         </Alert>
       )}
+
       <Button
         onClick={() => {
           setAlertVisible(!alertVisible);
         }}
       >
-        Danger!
+        &nbsp;DANGER!&nbsp;
       </Button>
 
       <ListGroup
