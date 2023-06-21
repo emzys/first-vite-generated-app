@@ -1,0 +1,12 @@
+.btnClose {
+  background-color: deeppink;
+  border: none;
+  position: absolute;
+  color: white;
+  padding: 4px;
+  width: 22px;
+  height: 22px;
+  top: 8px;
+  right: 8px;
+  border-radius: 6px;
+}
